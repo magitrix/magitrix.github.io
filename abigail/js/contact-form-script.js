@@ -7,8 +7,11 @@ $("#contactForm").validator().on("submit", function (event) {
         // everything looks good!
         event.preventDefault();
         submitForm();
-    }
+
+}
+
 });
+
 
 
 function submitForm(){
@@ -21,7 +24,7 @@ function submitForm(){
 
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
+        url: "https://abigailco.000webhostapp.com/form-process.php",
         data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
         success : function(text){
             if (text == "success"){
@@ -29,9 +32,12 @@ function submitForm(){
             } else {
                 formError();
                 submitMSG(false,text);
-            }
-        }
-    });
+
+}
+
+}
+
+});
 }
 
 function formSuccess(){
