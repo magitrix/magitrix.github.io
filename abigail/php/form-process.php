@@ -33,7 +33,7 @@ if (empty($_POST["message"])) {
 
 
 $EmailTo = "contact.magitrix@gmail.com";
-$Subject = "Abigail Cleaning";
+$Subject = "Abigail Contact Form";
 
 // prepare email body text
 $Body = "";
